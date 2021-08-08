@@ -1,0 +1,106 @@
+header {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    background-color: #13131D;
+    box-shadow: 0px 10px 10px #0F1724;
+    transition: left 0.5s;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .logo {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+
+        svg {
+            user-select: none;
+            width: 100%;
+            max-width: 100px;
+        }
+    }
+
+    .menu {
+        padding: 20px 20px 0px 20px;
+
+        .name {
+            display: inline;
+            position: relative;
+
+            user-select: none;
+            text-transform: uppercase;
+            font-size: 15px;
+            color: #dfdfdf;
+            
+            &:hover {
+                cursor: pointer;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                display: block;
+                width: 0%;
+                height: 2px;
+                background-image: linear-gradient(to left, transparent, red);
+                border-radius: 2px;
+                transition: width 0.5s;
+
+                content: "";
+                position: absolute;
+                margin-top: 0px;
+                left: 0;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 20px 0px;
+
+            li {
+                user-select: none;
+                cursor: pointer;
+                line-height: 40px;
+                color: gray;
+                font-weight: bold;
+                transition: color 0.3s;
+
+                i {
+                    color: gray;
+                    width: 20px;
+                    margin-right: 5px;
+                    margin-left: 1px;
+                }
+
+                &:hover {
+                    color: #dfdfdf;
+
+                    i {
+                        color: #dfdfdf;
+                    }
+                }
+
+                &.contract {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .version {
+        text-align: center;
+        margin: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: gray;
+    }
+}

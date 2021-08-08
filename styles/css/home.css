@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+body {
+  overflow: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  background-color: #13131D;
+  -webkit-box-shadow: 0px 10px 10px #0F1724;
+          box-shadow: 0px 10px 10px #0F1724;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+}
+
+header::-webkit-scrollbar {
+  display: none;
+}
+
+header .logo {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .logo svg {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  max-width: 100px;
+}
+
+header .menu {
+  padding: 20px 20px 0px 20px;
+}
+
+header .menu .name {
+  display: inline;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #dfdfdf;
+}
+
+header .menu .name:hover {
+  cursor: pointer;
+}
+
+header .menu .name:hover::after {
+  width: 100%;
+}
+
+header .menu .name::after {
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), to(red));
+  background-image: linear-gradient(to left, transparent, red);
+  border-radius: 2px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  content: "";
+  position: absolute;
+  margin-top: 0px;
+  left: 0;
+}
+
+header .menu ul {
+  list-style: none;
+  padding: 20px 0px;
+}
+
+header .menu ul li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  line-height: 40px;
+  color: gray;
+  font-weight: bold;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+header .menu ul li i {
+  color: gray;
+  width: 20px;
+  margin-right: 5px;
+  margin-left: 1px;
+}
+
+header .menu ul li:hover {
+  color: #dfdfdf;
+}
+
+header .menu ul li:hover i {
+  color: #dfdfdf;
+}
+
+header .menu ul li.contract {
+  margin-top: 40px;
+}
+
+header .version {
+  text-align: center;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: gray;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background-color: #0f1724;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -webkit-transition: width 0.5s, left 0.5s;
+  transition: width 0.5s, left 0.5s;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main .wallpaper {
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0f1724), to(transparent)), url("../../assets/wallpaper.jpg");
+  background-image: linear-gradient(to top, #0f1724, transparent), url("../../assets/wallpaper.jpg");
+}
+
+main .navbar {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 30px;
+}
+
+main .navbar svg {
+  display: none;
+}
+
+main .navbar i {
+  font-size: 25px;
+  cursor: pointer;
+  color: gray;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+main .navbar i:hover {
+  color: #ffffff;
+}
+
+main .navbar .avatar {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../assets/avatar.png");
+  background-color: gray;
+  border-radius: 50%;
+}
+
+main .infos {
+  margin: 15vh 30px 10vh 50px;
+  position: relative;
+}
+
+main .infos .name {
+  margin: 10px 0px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .infos .description {
+  max-width: 500px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #cacaca;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main .time {
+  margin-top: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .time span {
+  color: gray;
+  font-size: 14px;
+  padding-right: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .time span:not(:first-child) {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-left: 10px;
+  border-left: 1px solid gray;
+}
+
+main .time span.box {
+  font-weight: bold;
+  color: crimson;
+}
+
+main .buttons {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: 20px;
+}
+
+main .buttons .play {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  outline: none;
+  padding: 7px 13px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+  background-color: crimson;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+main .buttons .play i {
+  margin-right: 5px;
+}
+
+main .buttons .play:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main .buttons .list {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 13px;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+main .buttons .list i {
+  margin-right: 5px;
+}
+
+main .buttons .list:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main .trends {
+  margin: 30px;
+  position: relative;
+}
+
+main .trends .title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 14px;
+  color: gray;
+}
+
+main .trends .title i {
+  color: crimson;
+}
+
+main .trends .series {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+main .trends .series:hover::-webkit-scrollbar-thumb {
+  background-color: #0a0f18;
+}
+
+main .trends .series::-webkit-scrollbar {
+  cursor: pointer;
+  height: 8px;
+  background-color: #0f1724;
+}
+
+main .trends .series::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #0f1724;
+}
+
+main .trends .series .box {
+  min-width: 200px;
+  height: 300px;
+  margin: 20px;
+  -webkit-transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.3s ease;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+main .trends .series .box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+main .trends .series .box:hover > .info {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+main .trends .series .box:hover > .info > .content {
+  opacity: 1;
+}
+
+main .trends .series .box .info {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0a0f18), to(transparent));
+  background-image: linear-gradient(to top, #0a0f18, transparent);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  position: relative;
+  padding: 10px;
+}
+
+main .trends .series .box .info .content {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+}
+
+main .trends .series .box .info .content .title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+main .trends .series .box .info .content .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .trends .series .box .info .content .options .icons {
+  margin-top: 10px;
+}
+
+main .trends .series .box .info .content .options .icons i {
+  font-size: 14px;
+  margin: 0px 10px 5px 5px;
+  color: gray;
+  cursor: pointer;
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+main .trends .series .box .info .content .options .icons i:hover {
+  color: #ffffff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main .trends .series .box .info .content .options .time {
+  margin-right: 10px;
+  font-size: 12px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: gray;
+}
+
+@media (max-width: 430px) {
+  main .navbar {
+    padding: 20px;
+  }
+  main .navbar svg {
+    display: block;
+  }
+  main .navbar i {
+    display: none;
+  }
+  main .infos {
+    margin: 15vh 20px 5vh 20px;
+  }
+  main .trends {
+    margin: 10px 0px;
+  }
+  main .trends .title {
+    margin: 0px 20px;
+  }
+  main .trends .series {
+    margin-top: 10px;
+  }
+}
